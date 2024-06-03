@@ -105,15 +105,6 @@ func (h BookHandler) GetBooks(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// var booksResponse []map[string]interface{}
-	// for _, v := range books {
-	// 	formatter := map[string]interface{}{
-
-	// 	}
-
-	// 	booksResponse = append(booksResponse, formatter)
-	// }
-
 	api.APIResponse(w, api.Response{Meta: api.Meta{Message: "Success to GetBooks", Code: http.StatusOK, Success: true}, Data: books})
 }
 
